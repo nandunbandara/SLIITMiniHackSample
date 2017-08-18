@@ -39,7 +39,7 @@ export class LoginPage {
       loader.present();
     }else{
     //  error : invalid credentials
-
+    
     }
     // console.log('login function called');
   }
