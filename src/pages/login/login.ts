@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 
 
 /**
@@ -19,7 +19,8 @@ export class LoginPage {
   username;
   password;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              public loadingCtrl: LoadingController, public alertCtrl: AlertController) {
   }
 
   ionViewDidLoad() {
@@ -31,7 +32,7 @@ export class LoginPage {
     let username = this.username;
     let password = this.password;
 
-    if(username == 'testUser' && password == 123){
+    if(username == 'user' && password == 123){
       let loader = this.loadingCtrl.create({
         content: 'Logging in...',
         duration: 2000
@@ -39,9 +40,24 @@ export class LoginPage {
       loader.present();
     }else{
     //  error : invalid credentials
-    
+      let alert = this.alertCtrl.create({
+        title: 'Invalid Login',
+        subTitle: 'Could not authenticate user. Please check your login credentials!',
+        buttons: ['OK']
+      });
+      alert.present();
     }
     // console.log('login function called');
+  }
+
+  passwordReset(){
+    let pwdResetAlert = this.alertCtrl.create({
+      title: 'Password Reset!',
+      subTitle: 'Please contact your Administrator/Supervisor to reset your password.',
+      buttons: ['OK']
+    });
+
+    pwdResetAlert.present();
   }
 
 }
