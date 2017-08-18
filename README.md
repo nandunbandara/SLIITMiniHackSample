@@ -1,26 +1,11 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+This is a Sample Mobile Application developed for SLIIT Mini-Hackathon 2017
 
-## How to use this template
+## Sample Mobile Application
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
-
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
-
-### With the Ionic CLI:
-
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
-
+### Running the application
+1. Install ionic and cordova globally in your development environment
 ```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
+$ npm install -g ionic cordova 
 ```
-
-Then, to run it, cd into `myBlank` and run:
-
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
-
-Substitute ios for android if not on a Mac.
-
+2. Clone this project.
+3. Go to the directory and use ionic serve to run
