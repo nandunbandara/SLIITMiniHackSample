@@ -1,8 +1,8 @@
 This is a Sample Mobile Application developed for SLIIT Mini-Hackathon 2017
 
-##Sample Mobile Application
+## Sample Mobile Application
 
-###Running the project
+### Running the project
 1.Install ionic and cordova globally in your dev environment
 
 npm install -g ionic cordova 
