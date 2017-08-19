@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 
+import { HomePage } from '../home/home';
+
 
 /**
  * Generated class for the LoginPage page.
@@ -35,9 +37,11 @@ export class LoginPage {
     if(username == 'user' && password == 123){
       let loader = this.loadingCtrl.create({
         content: 'Logging in...',
-        duration: 2000
+        duration: 500
       })
       loader.present();
+    //  load home page
+      this.navCtrl.push(HomePage);
     }else{
     //  error : invalid credentials
       let alert = this.alertCtrl.create({

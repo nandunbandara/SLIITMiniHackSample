@@ -7,8 +7,15 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  notes;
 
+  constructor(public navCtrl: NavController) {
+    this.notes = [
+      {
+        title: 'Sample Note',
+        content: 'This is a sample note to the user'
+      }
+    ]
   }
 
 }
